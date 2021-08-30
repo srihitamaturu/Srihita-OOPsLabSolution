@@ -7,9 +7,10 @@ public class Employee {
     private String emailId;
     private String password;
 
+
     public Employee(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        setFirstName(firstName);
+        setLastName(lastName);
     }
 
     public String getFirstName() {
@@ -53,8 +54,8 @@ public class Employee {
     }
 
     public void showCredentials() {
-        System.out.println("Dear " + firstName + ", your generated credentials are as follows");
-        System.out.println("Email -->" + emailId);
-        System.out.println("Password -->" + password);
+        System.out.println("Dear " + getFirstName() + ", your generated credentials are as follows");
+        System.out.println("Email --> " + getEmailId());
+        System.out.println("Password --> " + getPassword());
     }
 }
